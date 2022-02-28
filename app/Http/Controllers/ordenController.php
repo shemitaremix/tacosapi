@@ -9,6 +9,11 @@ use App\Http\Requests\actializarordenRequest;
 
 class ordenController extends Controller
 {
+    //mostrar orden
+    public function mostrartodo(){
+        $orden= Orden::all();
+        return response()->json(["estatus" => "orden-feli","orden" => $orden]);
+    }
     //guardar en la base de datos la orden de tacos
     public function store(guardarordenRequest $request){
         Orden::create($request->all());
@@ -33,6 +38,16 @@ class ordenController extends Controller
         return response()->json([
             'res' => true,
             'mensaje' => 'orden actualizada de manera correcta'
+        ],200);
+    }
+
+    //eliminar una orden
+    public function destroy(Orden $orden)
+    {
+        $orden -> delete();
+        return response()->json([
+            'res' => true,
+            'mensaje' => 'orden eliminada de manera correcta'
         ],200);
     }
 
