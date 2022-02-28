@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\tacosController;
+use App\Http\Controllers\refrescoController;
+use App\Http\Controllers\ordenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +19,6 @@ use App\Http\Controllers\tacosController;
 
 
 
-Route::post('/mitaco', [tacosController::class, 'mitaco'])->name('mitaquito');
+Route::post('/tacos', [tacosController::class, 'mitaco'])->name('mitaquito');
+Route::post('/refrescos', [refrescoController::class, 'mostrarrefrescos'])->name('refresquillo');
+Route::post('/orden', [ordenController::class, 'store'])->name('ordenhecha');

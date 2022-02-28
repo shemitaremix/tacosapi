@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('refrescos', function (Blueprint $table) {
+        Schema::create('orden', function (Blueprint $table) {
             $table->id();
-            $table->string("nombre");
-            $table->string("sabor");
-            $table->string("distribuidora");
-            $table->integer("tamaño");
-            $table->integer("precio");
-            $table->string("imagen");
+            $table->string("nombre_orden");
+            $table->string("nombre_cliente");
+            $table->string("tacos_sabor");
+            $table->integer("numero_tacos");
+            $table->string("refresco_sabor");
+            $table->string("numero_refresco");
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('refrescos');
+        Schema::dropIfExists('orden');
     }
 };
