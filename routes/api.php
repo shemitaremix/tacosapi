@@ -22,3 +22,5 @@ use App\Http\Controllers\ordenController;
 Route::post('/tacos', [tacosController::class, 'mitaco'])->name('mitaquito');
 Route::post('/refrescos', [refrescoController::class, 'mostrarrefrescos'])->name('refresquillo');
 Route::post('/orden', [ordenController::class, 'store'])->name('ordenhecha');
+Route::post('/orden/{orden}', [ordenController::class, 'show'])->name('ordenvista');
+Route::put('/orden/{orden}', [ordenController::class, 'update'])->name('ordenvista');
