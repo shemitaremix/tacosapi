@@ -1,11 +1,16 @@
 # Api tacos
 
+##  Aqui se encuentra el link del end point de la api :alien:
+https://app.swaggerhub.com/apis/shemitaremix/taqueria/1.0.0
+
+
 ## Copiar repositorio :space_invader:
 
-Hey puedes copiar el codigo del proyecto:
+Hey puedes copiar el codigo del proyecto con el siguiente comando en tu terminal:
 ```
 git clone
 ```
+
 ### Como podemos hacer mejor esta api :robot:
 Esta api puede ser mucho mejor, nos pueden ayudar a mantenerla viva usandola y mejorandola con metodos   :clinking_glasses: `gitbash` como lo son:
 
