@@ -17,12 +17,12 @@ use App\Http\Controllers\ordenController;
 |
 */
 
-    
 
-Route::post('/tacos', [tacosController::class, 'mitaco'])->name('mitaquito');
-Route::post('/refrescos', [refrescoController::class, 'mostrarrefrescos'])->name('refresquillo');
+
+Route::get('/tacos', [tacosController::class, 'mitaco'])->name('mitaquito');
+Route::get('/refrescos', [refrescoController::class, 'mostrarrefrescos'])->name('refresquillo');
 Route::post('/crearorden', [ordenController::class, 'store'])->name('ordenhecha');
-Route::post('/orden', [ordenController::class, 'mostrartodo'])->name('miorden');
+Route::get('/orden', [ordenController::class, 'mostrartodo'])->name('miorden');
 Route::post('/consultarorden/{orden}', [ordenController::class, 'show'])->name('ordenvista');
 Route::put('/actualizarorden/{orden}', [ordenController::class, 'update'])->name('actualizarorden');
 Route::delete('/eliminarorden/{orden}', [ordenController::class, 'destroy'])->name('elminarorden');
