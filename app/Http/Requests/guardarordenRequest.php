@@ -24,12 +24,20 @@ class guardarordenRequest extends FormRequest
     public function rules()
     {
         return [
-            "nombre_orden" => "required",
-            "nombre_cliente" => "required",
-            "tacos_sabor" => "required",
-            "numero_tacos" => "required",
-            "refresco_sabor" => "required",
-            "numero_refresco" => "required",
-        ];
+            'nombre_orden' => 'required',
+            'nombre_cliente' => 'required',
+            'tacos_sabor' => 'required',
+            'numero_tacos' => 'required|integer',
+            'refresco_sabor' => 'required',
+            'numero_refresco'  => 'required|integer',
+       ];
+        $data = reques()->validate(
+
+            [
+                'nombre_orden.required' => 'Es necesario que llene el nombre de la orden',
+                'nombre_cliente.required' => 'Es necesario que llene el nombre del cleinte',
+                'tacos_sabor.required' => 'Es necesario que coloque el sabor del taco'
+
+            ]);
     }
 }

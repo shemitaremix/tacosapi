@@ -24,12 +24,13 @@ class actializarordenRequest extends FormRequest
     public function rules()
     {
         return [
-            "nombre_orden" => "required",
-            "nombre_cliente" => "required",
-            "tacos_sabor" => "required",
-            "numero_tacos" => "required",
-            "refresco_sabor" => "required",
-            "numero_refresco" => "required",
+            'nombre_orden' => 'required',
+            'nombre_cliente' => 'required',
+            'tacos_sabor' => 'required',
+            'numero_tacos' => 'required|integer',
+            'refresco_sabor' => 'required',
+            'numero_refresco'  => 'required|integer',
         ];
+        
     }
 }

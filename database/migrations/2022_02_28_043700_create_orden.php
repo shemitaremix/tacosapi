@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("tacos_sabor");
             $table->integer("numero_tacos");
             $table->string("refresco_sabor");
-            $table->string("numero_refresco");
+            $table->integer("numero_refresco");
             $table->timestamps();
         });
     }
